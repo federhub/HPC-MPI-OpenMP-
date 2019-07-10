@@ -1,0 +1,13 @@
+default: poisson_bug
+
+poisson: poisson.c
+	gcc -O3 -Wall -o poisson poisson.c -lm
+
+poisson_bug: poisson_bug.c
+	gcc -O3 -Wall -o poisson_bug poisson_bug.c -lm -g
+
+poisson_omp: poisson_omp.c
+	gcc -O3 -fopenmp -Wall -o poisson_omp poisson_omp.c -lm
+
+poisson_mpi: poisson_mpi.c
+	mpicc -O3 -Wall -o poisson_mpi poisson_mpi.c -lm
