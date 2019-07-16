@@ -11,7 +11,6 @@ comm = MPI.COMM_WORLD
 
 comSize = comm.Get_size()
 myRank = comm.Get_rank()
-#secret =np.array([myRank]*2,dtype=float)
 
 secret = np.random.random_sample(1)
 friendSecret = -1
